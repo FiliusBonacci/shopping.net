@@ -19,7 +19,7 @@ namespace Shopping
             double sum = 0;
             foreach (Product Product in Products)
             {
-                sum += Product.Price;
+                sum += (Product.Price * Product.Quantity);
             }
             return sum;
         }

@@ -21,5 +21,14 @@ namespace ShoppingTest
             Assert.IsTrue(ch.Products.Contains(p1));
 
         }
+
+        [TestMethod]
+        public void checkoutTotalTest()
+        {
+            Checkout ch = u1.buyProduct(p1);
+
+            double expected = 499.9;
+            Assert.AreEqual(expected, ch.getTotal(), 0.00000001);
+        }
     }
 }
