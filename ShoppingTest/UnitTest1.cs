@@ -33,5 +33,16 @@ namespace ShoppingTest
             Assert.AreEqual(expected, ch.getTotal(), 0.00000001);
 
         }
+
+
+        [TestMethod]
+        public void checkoutProductsListTest()
+        {
+            Checkout ch = u1.buyProduct(p1);
+
+            // expected , accual
+            CollectionAssert.AreEqual(new[] {p1}, ch.productsObjects());
+
+        }
     }
 }

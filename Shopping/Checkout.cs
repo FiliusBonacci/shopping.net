@@ -34,5 +34,11 @@ namespace Shopping
 
             return aaa;
         }
+
+        public List<Product> productsObjects()
+        {
+            
+            return this.Products;
+        }
     }
 }
