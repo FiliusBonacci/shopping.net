@@ -23,5 +23,16 @@ namespace Shopping
             }
             return sum;
         }
+
+        public string listOfProducts()
+        {
+            string aaa = "";
+            foreach (Product product in Products)
+            {
+                aaa = string.Join(",", product.Name);
+            }
+
+            return aaa;
+        }
     }
 }

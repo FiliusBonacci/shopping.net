@@ -18,7 +18,9 @@ namespace ShoppingTest
         public void buyProductTest()
         {
             Checkout ch = u1.buyProduct(p1);
-            Assert.IsTrue(ch.Products.Contains(p1));
+            //            Assert.IsTrue(ch.Products.Contains(p1));
+//            Console.Write(ch.listOfProducts());
+            StringAssert.Contains(ch.listOfProducts(), "spodnie");
 
         }
 
@@ -29,6 +31,7 @@ namespace ShoppingTest
 
             double expected = 499.9;
             Assert.AreEqual(expected, ch.getTotal(), 0.00000001);
+
         }
     }
 }
