@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shopping
 {
-    class User
+    public class User
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -14,11 +14,26 @@ namespace Shopping
 
 
 
-        public void buyProduct(Product product)
+        public User(int id, string fn, string ln)
         {
-            Checkout checkout = new Checkout();
-            checkout.User = this;
+            this.Id = id;
+            this.FirstName = fn;
+            this.LastName = ln;
+        }
+
+
+        public Checkout buyProduct(Product product)
+        {
+            Checkout checkout = new Checkout
+            {
+                User = this,
+//                Products = (new List<Product>()).Add(product),
+                
+            };
+            
+        
             checkout.Products.Add(product);
+            return checkout;
 
         }
 

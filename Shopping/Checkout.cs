@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Shopping
 {
-    class Checkout
+    public class Checkout
     {
         public User User { get; set; }  
-        public List<Product> Products { get; set; }
+        //public List<Product> Products { get; set; }
+        public List<Product> Products = new List<Product>();
 
 
 
-        public float getTotal()
+        public double getTotal()
         {
-            float sum = 0;
+            double sum = 0;
             foreach (Product Product in Products)
             {
                 sum += Product.Price;
