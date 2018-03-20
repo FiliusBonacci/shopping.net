@@ -44,5 +44,7 @@ namespace ShoppingTest
             CollectionAssert.AreEqual(new[] {p1}, ch.productsObjects());
 
         }
+
+
     }
 }
