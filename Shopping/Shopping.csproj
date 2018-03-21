@@ -45,6 +45,47 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.15.6.27413\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.VisualStudio.OLE.Interop.7.10.6071\lib\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.Vsip, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.QualityTools.Vsip.15.6.27413\lib\net45\Microsoft.VisualStudio.QualityTools.Vsip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Framework, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Framework.15.6.27413\lib\net45\Microsoft.VisualStudio.Shell.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.VisualStudio.Shell.Interop.7.10.6072\lib\net11\Microsoft.VisualStudio.Shell.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\Microsoft.VisualStudio.TextManager.Interop.7.10.6071\lib\net11\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Threading.15.4.4\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Utilities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Utilities.15.6.27413\lib\net46\Microsoft.VisualStudio.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Validation.15.3.15\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NServiceBus.6.4.3\lib\net452\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="StreamJsonRpc, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\StreamJsonRpc.1.2.8\lib\net45\StreamJsonRpc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,8 +96,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\DefaultTestingLoggerFactory.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\FakeBuilder.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\NamedLogger.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\OutgoingMessage.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\OutgoingMessageExtensions.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\PublishedMessage.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\RepliedMessage.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\SentMessage.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\Subscription.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableAuditContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableBatchDispatchContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableBehaviorContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableDispatchContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableEndpointInstance.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableForwardingContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableIncomingContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableIncomingLogicalMessageContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableIncomingPhysicalMessageContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableInvokeHandlerContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableMessageHandlerContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableMessageProcessingContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableMessageSession.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableOutgoingContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableOutgoingLogicalMessageContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableOutgoingPhysicalMessageContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableOutgoingPublishContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableOutgoingReplyContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableOutgoingSendContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestablePipelineContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableRoutingContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableSubscribeContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableTransportReceiveContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestableUnsubscribeContext.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TestingLoggerFactory.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\TextWriterLogger.cs" />
+    <Compile Include="App_Packages\NSB.Testing.Fakes.6.4.3\Unsubscription.cs" />
     <Compile Include="Checkout.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="IProduct.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shop.cs" />
@@ -82,6 +160,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
