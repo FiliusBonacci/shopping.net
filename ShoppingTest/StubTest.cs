@@ -5,6 +5,7 @@ using System.Net.Mime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Fakes;
 using Shopping;
+using Shopping.Fakes;
 
 namespace ShoppingTest
 {
@@ -58,9 +59,12 @@ namespace ShoppingTest
         [TestMethod]
         public void TestMethod1()
         {
-//            IProduct iproduct = new Application.Business.Fakes.StubI
+            IProduct iProduct = new StubIProduct()
+            {
+                GetProductPriceFromDBString = (productName) => { return 49.99; }
+            };
             Product product = new Product(iProduct);
-            double result = product.GetProductPrice("Koszula");
+            double result = product.GetProductPrice("koszula");
             Assert.AreEqual(49.99, result);
         }
     }
