@@ -59,13 +59,28 @@ namespace ShoppingTest
         [TestMethod]
         public void TestMethod1()
         {
-            IProduct iProduct = new StubIProduct()
-            {
-                GetProductPriceFromDBString = (productName) => { return 49.99; }
-            };
-            Product product = new Product(iProduct);
-            double result = product.GetProductPrice("koszula");
-            Assert.AreEqual(49.99, result);
+//            IProduct iProduct = new StubIProduct()
+//            {
+//                GetProductPriceFromDBString = (productName) => { return 49.99; }
+//            };
+//            Product product = new Product(iProduct);
+//            double result = product.GetProductPrice("koszula");
+//            Assert.AreEqual(49.99, result);
+        }
+
+
+        [TestMethod]
+        public void ShimsTest()
+        {
+//            using (ShimsContext.Create())
+//            {
+//                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2018, 3, 23);
+//
+//                var checkout = new Checkout();
+//
+//                var expected = new DateTime(2018, 3, 23);
+//                Assert.AreEqual(expected, checkout.CreatedAt);
+//            }
         }
     }
 }

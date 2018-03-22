@@ -12,7 +12,7 @@ namespace Shopping
         //public List<Product> Products { get; set; }
         public List<Product> Products = new List<Product>();
 
-
+        public DateTime CreatedAt { get; set; }
 
         public double getTotal()
         {
